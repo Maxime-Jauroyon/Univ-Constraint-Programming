@@ -53,6 +53,20 @@
 			</ref>
             		
         </config>
+        		
+        <config default="false" name="carreLatin" category="opl">
+            			
+            <ref name="carreLatin.mod" type="model">
+			</ref>
+            		
+        </config>
+        		
+        <config default="false" name="carreLatin_croissant" category="opl">
+            			
+            <ref name="carreLatin_croissant.mod" type="model">
+			</ref>
+            		
+        </config>
         	
     </configs>
     	
