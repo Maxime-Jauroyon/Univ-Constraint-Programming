@@ -10,6 +10,13 @@
 			</ref>
             		
         </config>
+        		
+        <config default="false" name="TP2bis" category="opl">
+            			
+            <ref name="TP2_bis.mod" type="model">
+			</ref>
+            		
+        </config>
         	
     </configs>
     	
