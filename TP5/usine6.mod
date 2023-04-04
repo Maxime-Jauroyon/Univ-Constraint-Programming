@@ -75,7 +75,6 @@ subject to {
 //----------------------- Affichage Solution ---------------------------
 
 execute {
-   Opl.range
     writeln("Solution : ");
     for(var t in taches){
       var c = 0;
