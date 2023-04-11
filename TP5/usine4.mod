@@ -31,17 +31,25 @@ int	  puissanceMax = ...;   // la puissance maximale de l'usine
 //----------------------- Pretraitement ---------------------------		
 	    
 // A compléter si nécessaire
-int dureeMax = sum (t in taches) t.duree; // duree max si ont execute toutes les taches les unes apres les autres
-{string} codes = union (t in taches) {t.code}; // liste des codes des taches
+// duree max si ont execute toutes les taches les unes apres les autres
+int dureeMax = sum (t in taches) t.duree;
+// liste des codes des taches
+{string} codes = union (t in taches) {t.code};
+
+range dureeTache = 0..dureeMax;
 
 //----------------------- Modèle ---------------------------
 
 // -- variables de décisions --
-dvar int debut_taches[codes] in 0..dureeMax; // tableau de la valeur de debut des taches
-dvar int fin_taches[codes] in 0..dureeMax; // tableau de la valeur de fin des taches
+// tableau de la valeur de debut des taches
+dvar int debut_taches[codes] in dureeTache;
+// tableau de la valeur de fin des taches
+dvar int fin_taches[codes] in dureeTache;
 
 // -- variables de commodité --
-dvar int allExecution[codes][0..dureeMax] in 0..1; // tableau de l'execution de chaque tache a un instant d
+dvar int allConsomation[codes][dureeTache] in 0..1;
+
+dvar int totalConsomationRealTime[dureeTache] in 0..puissanceMax;
 
 // -- Critère d'optimisation --
 
@@ -64,15 +72,19 @@ subject to {
 
 
    // remplir le tableau d'executiion des taches a un instant d
-   forall(d in 0..dureeMax){
+   forall(d in dureeTache){
       forall(c in codes){
-         allExecution[c][d] == (debut_taches[c] <= d && fin_taches[c] > d);
+         allConsomation[c][d] == (debut_taches[c] <= d && fin_taches[c] > d);
       }
    }
 
    // ne pas depasser la consommation max 
-   forall(d in 0..dureeMax){
-      (sum (t in taches) allExecution[t.code][d] * t.puissance) <= puissanceMax;
+   forall(d in dureeTache){
+      (sum (t in taches) allConsomation[t.code][d] * t.puissance) <= puissanceMax;
+   }
+
+   forall(d in dureeTache){
+      totalConsomationRealTime[d] == (sum (t in taches) allConsomation[t.code][d] * t.puissance);
    }
 
 }	
@@ -94,4 +106,11 @@ execute {
       }
       writeln();
     }
+    writeln("evolution de la consomation :")
+    for(var d in dureeTache){
+      if (totalConsomationRealTime[d] > 0){
+         write(totalConsomationRealTime[d]," ");
+      }
+    }
+    writeln();
 }
