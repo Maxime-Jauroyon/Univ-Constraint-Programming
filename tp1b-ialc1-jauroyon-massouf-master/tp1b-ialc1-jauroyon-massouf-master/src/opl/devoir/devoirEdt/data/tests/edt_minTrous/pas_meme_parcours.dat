@@ -1,0 +1,46 @@
+/* pas les mêmes parcours donc le cours B va etre sur le creneau 1 même si cours A est sur le creneau 3 car il n'y a pas de trous car pas même parcours */
+
+
+nomInstance = "data/tests/edt_minTrous/pas_meme_parcours.dat"; // Chemin relatif vers ce fichier
+nbJours = 1;
+nbCreneauxParJour = 3;
+dureeCreneau = 60;
+horairePremierCreneau = <8, 30>;
+numeroCreneauAvantPauseMeridienne = 1;
+dureePauseMeridienne = 90;
+
+filieresEdt = {
+   <"L3-Informatique",   {},   {"L3INP1","L3INP2"}>,
+};
+
+parcoursEdt = {
+   <"L3INP1",  25,   {"CoursA"}>
+   <"L3INP2",  25,   {"CoursB"}>
+};
+
+coursEdt  = {
+ <"CoursA",    "Cours A - Cours",  "Prof1", 60,   {"amphi"}>,
+ <"CoursB",    "Cours B - Cours",  "Prof2", 60,   {"amphi"}>
+};
+
+seriesCours  = {
+};
+
+salles = {
+  <"Salle1",  50, {"amphi"}>
+};
+
+indisponibilitesProfs = {};
+
+indisponibilitesSalles = {};
+
+precedences = {
+};
+
+memesHoraires = {
+};
+
+creneauxFixes = {
+  <"CoursA",1,1,3>
+};
+

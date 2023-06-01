@@ -1,0 +1,47 @@
+nomInstance = "data/instances/instance_precedence.dat";
+nbJours = 7;
+nbCreneauxParJour = 4;
+dureeCreneau = 90;
+horairePremierCreneau = <8,00>;
+numeroCreneauAvantPauseMeridienne = 2;
+dureePauseMeridienne = 60;
+
+filieresEdt = {
+  <"L3-Informatique",   {"CoursA", "CoursB"}, {"L3INP1"}>,
+};
+
+parcoursEdt = {
+   < "L3INP1",  25,         {"CoursA-TD1", "CoursB-TD1"} >,
+};
+
+coursEdt  = {
+ <"CoursA",    "Cours A - Cours", "ProfA",  90, {"amphi"}>,
+ <"CoursA-TD1","Cours A - TD 1",   "ProfA", 120, {"td"}>,
+ <"CoursB",    "Cours B - Cours", "ProfB",  90, {"amphi"}>,
+ <"CoursB-TD1","Cours B - TD 1",   "ProfB", 120, {"td"}>,
+};
+
+seriesCours  = {
+ <"CoursA",    3, 2, 3>,
+ <"CoursA-TD1",3, 2, 3>,
+ <"CoursB",    3, 1, 2>,
+ <"CoursB-TD1", 3, 1, 2>,
+};
+
+salles = {
+  <"PUIO-GrandAmphi", 70,  {"amphi"}>,
+  <"PUIO-PetitAmphi", 50,  {"amphi"}>,
+  <"PUIO-TDRoom1",    25,  {"td"}>,
+  <"PUIO-TDRoom2",    25,  {"td"}>,
+};
+
+indisponibilitesProfs = {};
+indisponibilitesSalles = {};
+
+precedences = {
+  <"CoursA", "CoursA-TD1">,
+  <"CoursB", "CoursB-TD1">,
+};
+
+memesHoraires = {};
+creneauxFixes = {};

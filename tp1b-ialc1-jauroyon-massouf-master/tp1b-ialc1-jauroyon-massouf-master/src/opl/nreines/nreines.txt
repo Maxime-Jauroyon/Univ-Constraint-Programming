@@ -1,0 +1,59 @@
+/*********************************************
+Enoncé du problème :  
+
+Le problème des n reines consiste à déplacer n reines sur un damier
+de taille n ∗ n de telle façon que deux reines (se déplaçant comme
+aux jeu des échecs) ne soient jamais en position de prise mututelle.
+
+Un exemple de solution pour le problème des 4-reines : 
+
+	x  o  x  x
+	x  x  x  o
+	o  x  x  x  
+	x  x  o  x
+
+*********************************************/
+
+/* Formalisation en tant que problème de satisfaction de contraintes */
+
+X = {
+	// Mettre ici les noms de variables 
+	
+	c1, c2, c3, ..., cn
+}
+	
+D = {
+	// Décrire ici domaines respectifs des variables 
+
+	/* d = 1..n */
+	d, d, d, ..., d
+
+}
+
+/* c2 = 3 signifie "dans la colonne 2 on trouve la reine a la ligne 3" */
+
+C =  {
+	/* deux reines (se déplaçant comme aux jeu des échecs) ne soient jamais en position de prise mututelle. */
+
+	/* deux reines ne peuvent pas être sur la même colonne est deja satisfait car ce sont nos variables */
+
+	/* deux reines ne peuvent pas être sur la même ligne */
+	for (i = 1; i <= n; i++) {
+		for (j = 1; j <= n; j++) {
+			if (i != j) {
+				/* c1 != c2 */
+				ci != cj
+			}
+		}
+	}
+
+	/* deux reines ne peuvent pas être sur la même diagonale */
+	for (i = 1; i <= n; i++) {
+		for (j = 1; j <= n; j++) {
+			if (i != j) {
+				abs(i - j) != abs(ci - cj)
+			}
+		}
+	}
+
+}

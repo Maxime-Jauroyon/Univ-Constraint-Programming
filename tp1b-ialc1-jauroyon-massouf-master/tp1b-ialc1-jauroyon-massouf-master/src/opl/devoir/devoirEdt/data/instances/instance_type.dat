@@ -1,0 +1,123 @@
+/* Exemple illustrant la syntaxe des fichiers d'instances */
+/* ne doit pas fonctionner car le creneau fixe est insolvable (un cour de 3 creneaux ne peut commencer 1 creneau avant la pause)*/
+
+ nomInstance = "data/instances/instance_type.dat"; // Chemin relatif vers ce fichier
+nbJours = 15;                              // Nombre de jours de l'emploi du temps
+nbCreneauxParJour = 8;                     // Nombre de créneaux par jour
+dureeCreneau = 60;                         // Durée d'un créneau (en mn)	
+horairePremierCreneau = <8,30>;            // Horaire du premier créneau d'une journée
+numeroCreneauAvantPauseMeridienne =  4;	
+dureePauseMeridienne =  90;				
+
+
+filieresEdt = {
+/*  idFiliere            coursCommuns                        parcours
+/* -------------------------------------------------------------------------------- */
+   <"L3-Informatique",   {"PFA","LogiqueL3"},       {"L3INP1", "L3INP2" }>,
+   <"L3-Miage",  {"LogiqueL3","EcoL3IG","IG-Conf1"}, {"L3IGP1", "L3IGP2", "L3IGP3" }>
+};
+
+parcoursEdt = {
+/*	 idParcours Effectifs	coursParcours
+/* -------------------------------------------------------------------------------- */
+   < "L3INP1",  24,         {"PFA-TP1", "LogL3-TD1"} > ,
+   < "L3INP2",  26,         {"PFA-TP2", "LogL3-TD2"} > ,
+   //
+   <"L3IGP1",   20,         {"EcoL3IG-TD1", "LogL3-TDIG1"} >,
+   <"L3IGP2",   10,         {"EcoL3IG-TD2", "LogL3-TD1"}  >,
+   <"L3IGP3",   8,          {"EcoL3IG-TD2", "LogL3-TD2"}  >
+};
+
+
+coursEdt  = {
+/*	Code         Description   Prof      Duree(mn)   Besoins */
+/* -------------------------------------------------------------------------------- */
+ <"PFA",        "Programmation Fonctionnelle Avancée - Cours"
+                               "TomP",    90,        {"video", "amphi"}>,
+ <"PFA-TP1", 	"Programmation Fonctionnelle Avancée - TP1",
+                               "TomP",   120,        {"tp_info"}>,
+ <"PFA-TP2", 	"Programmation Fonctionnelle Avancée - TP21",
+                               "JeanF",  120,        {"tp_info"}>,
+ <"LogiqueL3", 	"Logique pour l'informatique  - Cours",
+                               "ChrisP",   90,       {"video", "amphi"}>,
+ <"LogL3-TD1", 	"Logique pour l'informatique - TD 1",
+                               "AlexT",   120,       {"td"}>,
+ <"LogL3-TD2", 	"Logique pour l'informatique - TD 2",
+                               "AlexT",   120,       {"td"}>,
+ <"LogL3-TDIG1","Logique pour l'informatique - TD 3",
+                               "FranckS", 120,       {"td"}>,
+ <"EcoL3IG", 	"Economie - Cours","GregD", 120,     {"video","cours","td"}>,
+ <"EcoL3IG-TD1","Economie - TD1",  "GregD", 90,      {"td","cours"}>,
+ <"EcoL3IG-TD2","Economie - TD2",  "GregD", 90,      {"td","cours"}>,
+ <"IG-Conf1", 	"Conference Droit de l'informatique", 
+                               "Conf1",    150,      {"cours"}>,
+};
+
+seriesCours  = {
+/*	idCours   nbOccurences  ecartMin  ecartMax */
+/* -------------------------------------------------------------------------------- */
+ <"PFA",            3,      5,      5>,
+ <"PFA-TP1",        3,      4,      6>,
+ <"PFA-TP2",        3, 	    4, 	    6>,
+ <"LogiqueL3",      3, 	    5, 	    5>,
+ <"LogL3-TD1",      3, 	    5,      5>,
+ <"LogL3-TD2",      3, 	    5, 	    5>,
+ <"LogL3-TDIG1",    3,      5,      5>,
+ <"EcoL3IG",        3, 	    2, 	    3>,
+ <"EcoL3IG-TD1",    3,      2,      3>,
+ <"EcoL3IG-TD2",    3,      2,      3>,
+};
+
+
+salles = {
+/*  idSalle       capacite  services */
+/* -------------------------------------------------------------------------------- */
+  <"PUIO-GrandAmphi", 250, {"video", "amphi", "cours"}>,
+  <"PUIO-PetitAmphi", 100, {"video", "amphi", "cours"}>,
+  
+  <"PUIO-C203",       40, {"video", "td"}>,
+  <"PUIO-C105",       40, {"td"}>,
+  <"PUIO-C204",       50, {"video", "cours", "td"}>,
+  <"PUIO-C202",       24, {"video", "tp_info"}>, 
+  <"PUIO-C101",       26, {"video", "tp_info"}>, 
+};
+
+indisponibilitesProfs = {
+/*  idProf    jour	horaireDebut   horaireFin */
+/* -------------------------------------------------------------------------------- */
+   <"TomP",    1,   <8,30>,        <16,30> >,
+   <"JeanF",   4,   <7,00>,        <10,00> >,
+   <"JeanF",  12,   <13,00>,       <18,30> >,
+};   
+
+indisponibilitesSalles = {
+*  idSalle    jour	horaireDebut   horaireFin */
+/* -------------------------------------------------------------------------------- */
+	<"PUIO-GrandAmphi", 1,  <8,30>, <18,30> >
+	<"PUIO-C204",  2,  <14,30>, <18,30> >
+};
+
+precedences = {
+	/* idCoursAvant, idCoursApres */
+	<"PFA", 		"PFA-TP1">,
+	<"PFA",			"PFA-TP2">,
+	<"LogiqueL3",	"LogL3-TD1">,
+	<"LogiqueL3",	"LogL3-TD2">,
+	<"LogiqueL3",	"LogL3-TDIG1">
+};
+
+memesHoraires = {
+   /* idCours1,    idCours2 */
+   <"PFA-TP1",     "PFA-TP2">
+};
+
+creneauxFixes = {
+	/* idCours  seance, jour, creneau */
+	<"IG-Conf1", 1,     2,    3>
+};
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+/* même parcour donc le cours B va etre sur le creneau 4 car le cours A est sur le creneau 5 et donc les trous sont minimiser */
+/* même parcour donc le cours D va etre sur le creneau 2 car le cours C est sur le creneau 1 et donc les trous sont minimiser */
+
+
+nomInstance = "data/tests/edt_minTrous/parcours2_cours4.dat"; // Chemin relatif vers ce fichier
+nbJours = 1;
+nbCreneauxParJour = 5;
+dureeCreneau = 60;
+horairePremierCreneau = <8, 30>;
+numeroCreneauAvantPauseMeridienne = 2;
+dureePauseMeridienne = 90;
+
+filieresEdt = {
+   <"L3-Informatique",   {},   {"L3INP1","L3INP2"}>,
+};
+
+parcoursEdt = {
+   <"L3INP1",  25,   {"CoursA","CoursB"}>,
+   <"L3INP2",  25,   {"CoursC","CoursD"}>
+};
+
+coursEdt  = {
+ <"CoursA",    "Cours A - Cours",  "Prof1", 60,   {"amphi"}>,
+ <"CoursB",    "Cours B - Cours",  "Prof2", 60,   {"amphi"}>,
+ <"CoursC",    "Cours C - Cours",  "Prof3", 60,   {"amphi"}>,
+ <"CoursD",    "Cours D - Cours",  "Prof4", 60,   {"amphi"}>
+};
+
+seriesCours  = {
+};
+
+salles = {
+  <"Salle1",  50, {"amphi"}>,
+  <"Salle2",  50, {"amphi"}>
+  <"Salle3",  50, {"amphi"}>
+  <"Salle4",  50, {"amphi"}>
+};
+
+indisponibilitesProfs = {};
+
+indisponibilitesSalles = {};
+
+precedences = {
+};
+
+memesHoraires = {
+};
+
+creneauxFixes = {
+  <"CoursA",1,1,5>,
+  <"CoursC",1,1,1>
+};

@@ -1,0 +1,10 @@
+/*********************************************
+Enoncé du problème :  
+
+Un carré magique d’ordre n est une grille carrée de taille n*n, 
+dont chaque case contient un entier compris entre 1 et n^2 de telle façon que  :
+- les sommes des éléments situés sur chaque ligne, 
+- les sommes des éléments situés sur chaque colonne, 
+- et les sommes des éléments situés sur chacune des deux diagonales du carré 
+... soient toutes identiques.
+*********************************************/

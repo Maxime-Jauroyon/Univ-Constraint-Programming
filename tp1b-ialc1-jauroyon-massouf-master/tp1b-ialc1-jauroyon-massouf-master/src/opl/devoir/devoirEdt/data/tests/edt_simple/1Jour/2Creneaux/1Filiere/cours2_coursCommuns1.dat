@@ -1,0 +1,65 @@
+/* 2 cours pas sur le même creneau car même parcours dont 1 cour commun  */
+
+
+nomInstance = "data/tests/edt_simple/1Jour/2Creneaux/1Filiere/cours2_coursCommuns1.dat"; // Chemin relatif vers ce fichier
+nbJours = 1;                              // Nombre de jours de l'emploi du temps
+nbCreneauxParJour = 2;                     // Nombre de créneaux par jour
+dureeCreneau = 60;                         // Durée d'un créneau (en mn)	
+horairePremierCreneau = <9,00>;            // Horaire du premier créneau d'une journée
+numeroCreneauAvantPauseMeridienne =  1;	
+dureePauseMeridienne =  60;				
+
+
+filieresEdt = {
+/*  idFiliere            coursCommuns                        parcours
+/* -------------------------------------------------------------------------------- */
+    <"L3-Informatique",   {"PFA"},       {"L3INP1"}>
+};
+
+parcoursEdt = {
+/*	 idParcours Effectifs	coursParcours
+/* -------------------------------------------------------------------------------- */
+   < "L3INP1",  24,         {"EcoL3IG"} >
+};
+
+
+coursEdt  = {
+/*	Code         Description   Prof      Duree(mn)   Besoins */
+/* -------------------------------------------------------------------------------- */
+ <"PFA",        "Programmation Fonctionnelle Avancée - Cours"
+                               "TomP",    60,        {}>,
+ <"EcoL3IG", 	"Economie - Cours","GregD", 60,     {}>,
+};
+
+seriesCours  = {
+/*	idCours   nbOccurences  ecartMin  ecartMax */
+/* -------------------------------------------------------------------------------- */
+};
+
+
+salles = {
+/*  idSalle       capacite  services */
+/* -------------------------------------------------------------------------------- */
+};
+
+indisponibilitesProfs = {
+/*  idProf    jour	horaireDebut   horaireFin */
+/* -------------------------------------------------------------------------------- */
+};   
+
+indisponibilitesSalles = {
+/*  idSalle    jour	horaireDebut   horaireFin */
+/* -------------------------------------------------------------------------------- */
+};
+
+precedences = {
+	/* idCoursAvant, idCoursApres */
+};
+
+memesHoraires = {
+   /* idCours1,    idCours2 */
+};
+
+creneauxFixes = {
+	/* idCours  seance, jour, creneau */
+};

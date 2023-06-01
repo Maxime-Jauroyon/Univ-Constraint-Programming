@@ -1,0 +1,34 @@
+/* Exemple d'instance simplifiée pour tester la capacité des salles */
+nomInstance = "data/instances/instance_pas_place.dat";
+nbJours = 1;
+nbCreneauxParJour = 4;
+dureeCreneau = 60;
+horairePremierCreneau = <8,30>;
+numeroCreneauAvantPauseMeridienne = 2;
+dureePauseMeridienne = 60;
+
+filieresEdt = {
+   <"L3-Informatique",   {"CoursA"},       {"Parcours1"}>
+};
+
+parcoursEdt = {
+   < "Parcours1",  50,         {} >
+};
+
+coursEdt  = {
+ <"CoursA",  "Cours A", "Prof1", 90, {"video", "amphi"}>,
+};
+
+seriesCours  = {
+};
+
+salles = {
+  <"Salle1", 20, {"video", "amphi", "cours"}>,
+  <"Salle2", 50, {"video", "amphi", "cours"}>,
+};
+
+indisponibilitesProfs = {};
+indisponibilitesSalles = {};
+precedences = {};
+memesHoraires = {};
+creneauxFixes = {};

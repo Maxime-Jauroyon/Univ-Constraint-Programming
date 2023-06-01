@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ASCII"?><project>
+    	
+    <version>1.0</version>
+    	
+    <configs>
+        		
+        <config default="true" name="nreines6" category="opl">
+            			
+            <ref name="data/d6.dat" type="data">
+			</ref>
+            			
+            <ref name="nreines_default.mod" type="model">
+			</ref>
+            		
+        </config>
+        		
+        <config default="false" name="nreines5" category="opl">
+            			
+            <ref name="data/d5.dat" type="data">
+			</ref>
+            			
+            <ref name="nreines_default.mod" type="model">
+			</ref>
+            		
+        </config>
+        		
+        <config default="false" name="nreines6_croissant" category="opl">
+            			
+            <ref name="nreines_croissant.mod" type="model">
+			</ref>
+            			
+            <ref name="data/d6.dat" type="data">
+			</ref>
+            		
+        </config>
+        		
+        <config default="false" name="nreines5_croissant" category="opl">
+            			
+            <ref name="data/d5.dat" type="data">
+			</ref>
+            			
+            <ref name="nreines_croissant.mod" type="model">
+			</ref>
+            		
+        </config>
+        		
+        <config default="false" name="nreines6_milieu.mod" category="opl">
+            			
+            <ref name="data/d6.dat" type="data">
+			</ref>
+            			
+            <ref name="nreines_milieu.mod" type="model">
+			</ref>
+            		
+        </config>
+        		
+        <config default="false" name="carreLatin" category="opl">
+            			
+            <ref name="carreLatin.mod" type="model">
+			</ref>
+            		
+        </config>
+        		
+        <config default="false" name="carreLatin_croissant" category="opl">
+            			
+            <ref name="carreLatin_croissant.mod" type="model">
+			</ref>
+            		
+        </config>
+        		
+        <config default="false" name="carreMagique" category="opl">
+            			
+            <ref name="carreMagique.mod" type="model">
+			</ref>
+            			
+            <ref name="data/a5.dat" type="data">
+			</ref>
+            		
+        </config>
+        		
+        <config default="false" name="carreMagique_other" category="opl">
+            			
+            <ref name="carreMagique_other.mod" type="model">
+			</ref>
+            			
+            <ref name="data/a5.dat" type="data">
+			</ref>
+            		
+        </config>
+        	
+    </configs>
+    	
+
+</project>

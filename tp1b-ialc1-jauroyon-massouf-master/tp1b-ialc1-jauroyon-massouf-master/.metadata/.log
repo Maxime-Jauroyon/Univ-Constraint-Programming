@@ -1,0 +1,19 @@
+!SESSION 2023-04-27 23:51:08.741 -----------------------------------------------
+eclipse.buildId=Build Community Edition
+java.fullversion=18.0.2+9
+JRE 18 Mac OS X amd64-64-Bit Compressed References 20220817_42 (JIT enabled, AOT enabled)
+OpenJ9   - 1d9d16830
+OMR      - b58aa2708
+JCL      - 8406c39ea29 based on jdk-18.0.2+9
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/philippe/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -clean -keyring /Users/philippe/.eclipse_keyring
+
+!ENTRY org.eclipse.ui 2 2 2023-04-27 23:52:01.811
+!MESSAGE Invalid preference category path: org.eclipse.wst.html.ui.preferences.web (bundle: org.eclipse.wst.jsdt.ui, page: org.eclipse.wst.jsdt.ui.preferences.JavaBasePreferencePage)
+
+!ENTRY ilog.odms.ide.ui 1 0 2023-04-27 23:52:02.403
+!MESSAGE /Applications/CPLEX_Studio_Community2211/cplex/bin/x86-64_osx/cpxchecklic: Exiting with code 1
+
+!ENTRY ilog.odms.ide.opllang 1 0 2023-04-27 23:54:33.745
+!MESSAGE concert_wrap.IloEndMT

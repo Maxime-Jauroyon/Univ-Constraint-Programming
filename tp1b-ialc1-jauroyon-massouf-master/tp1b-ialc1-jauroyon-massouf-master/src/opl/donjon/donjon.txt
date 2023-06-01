@@ -1,0 +1,13 @@
+/*********************************************
+Enoncé du problème :  
+
+Tout en haut d'un donjon à section carrée, dont les côtés correspondent aux 4 coins 
+cardinaux, 12 soldats montent la garde. 
+
+Comment doivent-ils se répartir afin qu'il y ait toujours au moins 5 paires d'yeux
+scrutant vers le Nord, l'Est, le Sud et vers l'Ouest. 
+
+On admettra qu'un garde placé sur un coté ne peut regarder que dans la direction 
+correspondant à ce côté, mais qu'un garde placé dans un des coins peut regarder 
+simultanément dans les directions correspondant aux deux côtés adjacents.
+*********************************************/

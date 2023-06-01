@@ -1,0 +1,48 @@
+/* ! attention ! */
+/* pour prouver que ca choisi bien le plus tot possible (2eme critere) il faut multiplier la sum qui s'occupe de ce critere par (-100000000) */
+/* vous pouvez copier coller la ligne en dessous (plus rapide) a la place de la ligne du minimize */
+/* 1000 * (sum (p in parcoursEdt) (parcoursTrous[p.id] + 1000*parcoursTrousJours[p.id])) + (-100000000) * sum (c in coursEdt) (sum (s in seances: s <= occurrenceMax[c.code]) (endOf(planning_cours_creneaux[c.code][s])));  */
+/* de cette maniere on montre bien que l'on privilegie finir tres tard les 2 jours plutot et donc que sans ce facteur on choisi le plus tot */
+/* mais par défaut nos modeles ont deja tendance a choisir le plus tot mais on tiens a montrer que nous avons quand même bien appliquer le critere*/
+
+nomInstance = "data/tests/edt_minTrous2/jours2_tard.dat"; // Chemin relatif vers ce fichier
+nbJours = 2;
+nbCreneauxParJour = 3;
+dureeCreneau = 60;
+horairePremierCreneau = <8, 30>;
+numeroCreneauAvantPauseMeridienne = 1;
+dureePauseMeridienne = 90;
+
+filieresEdt = {
+   <"L3-Informatique",   {},   {"L3INP1"}>,
+};
+
+parcoursEdt = {
+   <"L3INP1",  25,   {"CoursA"}>
+};
+
+coursEdt  = {
+ <"CoursA",    "Cours A - Cours",  "Prof1", 60,   {"amphi"}>
+};
+
+seriesCours  = {
+  <"CoursA",2,0,2>
+};
+
+salles = {
+  <"Salle1",  50, {"amphi"}>
+};
+
+indisponibilitesProfs = {};
+
+indisponibilitesSalles = {
+};
+
+precedences = {
+};
+
+memesHoraires = {
+};
+
+creneauxFixes = {
+};

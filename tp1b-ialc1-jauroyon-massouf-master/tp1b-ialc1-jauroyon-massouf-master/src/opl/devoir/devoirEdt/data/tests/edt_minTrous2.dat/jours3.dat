@@ -1,0 +1,49 @@
+/* la 2e seance sera tout de suite apres la premiere car tiens sur 1 jour */
+
+
+nomInstance = "data/tests/edt_minTrous2/jours3.dat"; // Chemin relatif vers ce fichier
+nbJours = 3;
+nbCreneauxParJour = 5;
+dureeCreneau = 60;
+horairePremierCreneau = <8, 30>;
+numeroCreneauAvantPauseMeridienne = 2;
+dureePauseMeridienne = 90;
+
+filieresEdt = {
+   <"L3-Informatique",   {},   {"L3INP1"}>,
+};
+
+parcoursEdt = {
+   <"L3INP1",  25,   {"CoursA"}>
+};
+
+coursEdt  = {
+ <"CoursA",    "Cours A - Cours",  "Prof1", 60,   {"amphi"}>
+};
+
+seriesCours  = {
+  <"CoursA",2,0,3>
+};
+
+salles = {
+  <"Salle1",  50, {"amphi"}>,
+  <"Salle2",  50, {"amphi"}>
+  <"Salle3",  50, {"amphi"}>
+  <"Salle4",  50, {"amphi"}>
+};
+
+indisponibilitesProfs = {};
+
+indisponibilitesSalles = {
+<"Salle1",1,<7,00>,<14,00>>
+};
+
+precedences = {
+};
+
+memesHoraires = {
+};
+
+creneauxFixes = {
+  <"CoursA",1,1,4>
+};

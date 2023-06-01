@@ -1,0 +1,69 @@
+/*****************************************************
+Enoncé du problème :  
+
+Quatre enfants, Anne, Bernard, Claudine et Denis, ayant tous un âge différent 
+(entre 4 et 7 ans), jouent chacun à différents endroits avec des billes de 
+couleur bleue, jaune, noire ou rouge. On sait de plus que : 
+
+1. Denis joue dans le parc et n’a pas 4 ans, contrairement à
+   l’enfant qui a des billes bleues.
+
+2. La fille de 6 ans a des billes jaunes.
+
+3. L’enfant qui joue avec des billes noires est plus âgé que l’enfant qui joue 
+   dans le jardin mais plus jeune que Anne.
+
+4. Anne, qui joue dans sa chambre, a 1 an de plus que l’enfant qui joue dans le salon.
+
+
+(NB : l'énoncé vous est rappelé pour que vous puissiez copier/coller tel quel 
+	  les phrases de l'énoncé dans vos modèles)
+
+*********************************************************/
+
+/* Formalisation en tant que problème de satisfaction de contraintes */
+
+X = {
+	// Mettre ici les noms de variables 
+
+   Anne, Bernard, Claudine, Denis,
+   Bleue, Jaune, Noire, Rouge,
+   Parc, Jardin, Chambre, Salon
+}
+	
+D = {
+	// Décrire ici domaines respectifs des variables 
+
+   /* da = 4..7 */
+   da, da, da, da,
+   da, da, da, da,
+   da, da, da, da
+}
+
+/* Anne = 7 signifie "Anne a 7 ans" 
+   Bleue = 7 signifie "L'enfant qui joue avec les billes bleues a 7 ans" 
+   Parc = 7 signifie "L'enfant qui joue dans le parc a 7 ans" */
+
+
+C =  {
+
+
+   /* Contrainte de différences (ayant tous un âge différent) */
+   Anne != Bernard, Anne != Claudine, Anne != Denis, Bernard != Claudine, Bernard != Denis, Claudine != Denis,
+   Bleue != jaune, Bleue != Noire, Bleue != Rouge, Jaune != Noire, Jaune != Rouge, Noire != Rouge,
+   Parc != Jardin, Parc != Chambre, Parc != Salon, Jardin != Chambre, Jardin != Salon, Chambre != Salon,
+
+   /* Denis joue dans le parc et n’a pas 4 ans, contrairement à l’enfant qui a des billes bleues. */
+   Denis == Parc, Denis != 4, Bleue != Parc, Bleue == 4,
+
+   /* La fille de 6 ans a des billes jaunes. */
+   Jaune == 6, Denis != 6, Bernard != 6,
+
+   /* L’enfant qui joue avec des billes noires est plus âgé que l’enfant qui joue dans le jardin mais plus jeune que Anne. */
+   Noire > Jardin, Noire < Anne,
+
+   /* Anne, qui joue dans sa chambre, a 1 an de plus que l’enfant qui joue dans le salon. */
+   Anne == Chambre, Anne == (1 + Salon)
+
+}
+

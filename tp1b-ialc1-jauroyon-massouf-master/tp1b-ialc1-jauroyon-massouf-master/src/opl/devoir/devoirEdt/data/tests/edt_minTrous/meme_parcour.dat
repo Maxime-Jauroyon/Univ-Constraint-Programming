@@ -1,0 +1,44 @@
+/* même parcour donc le cours B va etre sur le creneau 2 car le cours A est sur le creneau 3 et donc les trous sont minimiser */
+
+
+nomInstance = "data/tests/edt_minTrous/meme_parcour.dat"; // Chemin relatif vers ce fichier
+nbJours = 1;
+nbCreneauxParJour = 3;
+dureeCreneau = 60;
+horairePremierCreneau = <8, 30>;
+numeroCreneauAvantPauseMeridienne = 1;
+dureePauseMeridienne = 90;
+
+filieresEdt = {
+   <"L3-Informatique",   {},   {"L3INP1"}>,
+};
+
+parcoursEdt = {
+   <"L3INP1",  25,   {"CoursA","CoursB"}>
+};
+
+coursEdt  = {
+ <"CoursA",    "Cours A - Cours",  "Prof1", 60,   {"amphi"}>,
+ <"CoursB",    "Cours B - Cours",  "Prof2", 60,   {"amphi"}>
+};
+
+seriesCours  = {
+};
+
+salles = {
+  <"Salle1",  50, {"amphi"}>
+};
+
+indisponibilitesProfs = {};
+
+indisponibilitesSalles = {};
+
+precedences = {
+};
+
+memesHoraires = {
+};
+
+creneauxFixes = {
+  <"CoursA",1,1,3>
+};

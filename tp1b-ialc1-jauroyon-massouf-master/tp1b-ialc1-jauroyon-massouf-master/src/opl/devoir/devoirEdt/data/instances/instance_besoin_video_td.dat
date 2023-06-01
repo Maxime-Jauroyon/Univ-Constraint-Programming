@@ -1,0 +1,39 @@
+/* Exemple d'instance simplifiée pour tester les besoins en services des salles */
+nomInstance = "data/instances/instance_besoin_video_td.dat";
+nbJours = 1;
+nbCreneauxParJour = 4;
+dureeCreneau = 60;
+horairePremierCreneau = <8,30>;
+numeroCreneauAvantPauseMeridienne = 2;
+dureePauseMeridienne = 60;
+
+filieresEdt = {
+   <"L3-Informatique",   {"CoursA", "CoursB"},       {"Parcours1"}>
+};
+
+parcoursEdt = {
+   < "Parcours1",  30,         {} >
+};
+
+coursEdt  = {
+ <"CoursA",  "Cours A", "Prof1", 90, {"video", "amphi"}>,
+ <"CoursB",  "Cours B", "Prof2", 120, {"tp_info", "td"}>,
+};
+
+seriesCours  = {
+};
+
+salles = {
+  <"Salle1", 40, {"video", "amphi", "cours"}>,
+  <"Salle2", 30, {"tp_info"}>,
+  <"Salle3", 30, {"tp_info","td"}>,
+};
+
+indisponibilitesProfs = {};
+indisponibilitesSalles = {};
+precedences = {};
+memesHoraires = {};
+creneauxFixes = {};
+
+memesHoraires = {};
+creneauxFixes = {};

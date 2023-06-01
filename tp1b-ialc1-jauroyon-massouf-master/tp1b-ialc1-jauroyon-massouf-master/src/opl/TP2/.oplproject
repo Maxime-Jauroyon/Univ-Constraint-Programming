@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?><project>
+    	
+    <version>1.0</version>
+    	
+    <configs>
+        		
+        <config default="true" name="pieces" category="opl">
+            			
+            <ref name="TP2.mod" type="model">
+			</ref>
+            		
+        </config>
+        		
+        <config default="false" name="TP2bis" category="opl">
+            			
+            <ref name="TP2_bis.mod" type="model">
+			</ref>
+            		
+        </config>
+        	
+    </configs>
+    	
+
+</project>

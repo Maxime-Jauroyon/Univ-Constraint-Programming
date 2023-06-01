@@ -1,0 +1,48 @@
+/* les amphi ont lieu avant les td/tp et prennent 2 creneaux donc si la salle d'amhpi est pas dispo le matin alors le premier amphi a lieu a 9h30 et les petits cours de 1h ne pourrant pas avoir lieu avant car precedence*/
+
+nomInstance = "data/instances/instance_salles_indispo.dat";
+nbJours = 1;
+nbCreneauxParJour = 6;
+dureeCreneau = 60;
+horairePremierCreneau = <8,30>;
+numeroCreneauAvantPauseMeridienne = 3;
+dureePauseMeridienne = 60;
+
+filieresEdt = {
+  <"L3-Informatique",   {"PFA", "LogiqueL3"}, {"L3INP1","L3INP2"}>,
+};
+
+parcoursEdt = {
+   < "L3INP1",  30,         {"PFA-TP1"} >,
+   < "L3INP2",  30,         {"LogL3-TD1"} >,
+};
+
+coursEdt  = {
+ <"PFA",        "Programmation Fonctionnelle Avancée - Cours", "TomP",  120, {"amphi"}>,
+ <"PFA-TP1",    "Programmation Fonctionnelle Avancée - TP1",     "TomP", 60, {"tp_info"}>,
+ <"LogiqueL3",  "Logique pour l'informatique - Cours",           "ChrisP", 120, {"amphi"}>,
+ <"LogL3-TD1",  "Logique pour l'informatique - TD 1",            "AlexT", 60, {"td"}>,
+};
+
+seriesCours  = {
+};
+
+salles = {
+  <"PUIO-GrandAmphi", 100, {"amphi"}>,
+  <"PUIO-TPRoom1",    30,  {"tp_info"}>,
+  <"PUIO-TDRoom1",    30,  {"td"}>,
+};
+
+indisponibilitesProfs = {};
+
+indisponibilitesSalles = {
+  <"PUIO-GrandAmphi", 1, <8,30>, <9,30> >
+};
+
+precedences = {
+  <"PFA", "PFA-TP1">,
+  <"LogiqueL3", "LogL3-TD1">,
+};
+
+memesHoraires = {};
+creneauxFixes = {};

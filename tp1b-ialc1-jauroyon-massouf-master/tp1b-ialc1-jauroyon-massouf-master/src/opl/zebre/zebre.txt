@@ -1,0 +1,28 @@
+/*********************************************
+Le problème du zèbre : 
+
+Cinq personnes de nationalités différentes habitent les cinq 
+premières maisons d'une rue. Elles exercent cinq professions différentes 
+et ont chacune une boisson et un animal favori tous différents. 
+Les cinq habitations sont également de cinq couleurs différentes.
+
+On sait par ailleurs que :
+1. L'anglais habite la maison rouge
+2. L'espagnol possède un chien.
+3. Le japonais est peintre.
+4. L'italien boit du thé.
+5. Le norvégien habite la première maison à gauche.
+6. Le propriétaire de la maison verte boit du café.
+7. La maison verte est à droite de la blanche.
+8. Le sculpteur élève des escargots.
+9. Le diplomate habite la maison jaune.
+10. On boit du lait dans la maison du milieu.
+11. Le norvégien habite à coté de la maison bleue.
+12. Le violoniste boit des jus de fruits. 
+13. Le renard est dans la maison voisine du médecin.
+14. Le cheval est à coté de celle du diplomate.
+
+Le problème consiste à retrouver pour chacun des habitants
+quelle est sa nationalité, son animal favori, sa profession, la couleur de sa maison 
+et notamment à identifier celui qui boit de l'eau et celui qui élève un zèbre.
+*********************************************/

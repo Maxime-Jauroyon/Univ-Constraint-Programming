@@ -1,0 +1,46 @@
+/* si cour1 l'aprem mais cour2 même horaire alors cour2 l'aprem */
+
+nomInstance = "data/instances/instance_synchronized_courses.dat";
+nbJours = 1;
+nbCreneauxParJour = 2;
+dureeCreneau = 60;
+horairePremierCreneau = <8, 30>;
+numeroCreneauAvantPauseMeridienne = 1;
+dureePauseMeridienne = 90;
+
+filieresEdt = {
+   <"L3-Informatique",   {},   {"L3INP1","L3INP2"}>,
+};
+
+parcoursEdt = {
+   <"L3INP1",  25,   {"CoursA"}>,
+   <"L3INP2",  25,   {"CoursB"}>,
+};
+
+coursEdt  = {
+ <"CoursA",    "Cours A - Cours",  "Prof1", 60,   {"amphi"}>,
+ <"CoursB",    "Cours B - Cours",  "Prof2", 60,   {"amphi"}>
+};
+
+seriesCours  = {
+};
+
+salles = {
+  <"Salle1",  50, {"amphi"}>,
+  <"Salle2",  25, {"amphi"}>
+};
+
+indisponibilitesProfs = {};
+
+indisponibilitesSalles = {};
+
+precedences = {
+};
+
+memesHoraires = {
+  <"CoursA", "CoursB">
+};
+
+creneauxFixes = {
+  <"CoursA",1,1,2>
+};

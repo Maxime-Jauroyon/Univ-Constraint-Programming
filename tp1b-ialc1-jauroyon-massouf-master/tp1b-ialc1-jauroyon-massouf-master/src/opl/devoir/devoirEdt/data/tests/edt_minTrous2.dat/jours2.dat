@@ -1,0 +1,53 @@
+/* les cours seront le même jour pour les mêmes parcours */
+
+
+nomInstance = "data/tests/edt_minTrous2/jours2.dat"; // Chemin relatif vers ce fichier
+nbJours = 2;
+nbCreneauxParJour = 5;
+dureeCreneau = 60;
+horairePremierCreneau = <8, 30>;
+numeroCreneauAvantPauseMeridienne = 2;
+dureePauseMeridienne = 90;
+
+filieresEdt = {
+   <"L3-Informatique",   {},   {"L3INP1","L3INP2"}>,
+};
+
+parcoursEdt = {
+   <"L3INP1",  25,   {"CoursA","CoursB"}>,
+   <"L3INP2",  25,   {"CoursC","CoursD"}>
+};
+
+coursEdt  = {
+ <"CoursA",    "Cours A - Cours",  "Prof1", 60,   {"amphi"}>,
+ <"CoursB",    "Cours B - Cours",  "Prof2", 60,   {"amphi"}>,
+ <"CoursC",    "Cours C - Cours",  "Prof3", 60,   {"amphi"}>,
+ <"CoursD",    "Cours D - Cours",  "Prof4", 60,   {"amphi"}>
+};
+
+seriesCours  = {
+};
+
+salles = {
+  <"Salle1",  50, {"amphi"}>,
+  <"Salle2",  50, {"amphi"}>
+  <"Salle3",  50, {"amphi"}>
+  <"Salle4",  50, {"amphi"}>
+};
+
+indisponibilitesProfs = {};
+
+indisponibilitesSalles = {
+<"Salle1",1,<7,00>,<14,00>>
+};
+
+precedences = {
+};
+
+memesHoraires = {
+};
+
+creneauxFixes = {
+  <"CoursA",1,2,5>,
+  <"CoursC",1,1,1>
+};
